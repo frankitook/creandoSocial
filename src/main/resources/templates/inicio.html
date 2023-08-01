@@ -17,13 +17,14 @@
                     <div class="card-body">
                         <h2 class="card-title">Iniciar Sesión</h2>
                             
-                        <form action="/inicio/ingreso" method="GET">
+                        <form action="/inicio/ingreso" method="POST">
                             <div class="mb-3">
-                                <input type="text" class="form-control" id="username" placeholder="Nombre de usuario">
+                                <input type="email"  class="form-control" id="correo" name="correo" placeholder="Nombre de usuario">
                             </div>
                             <div class="mb-3">
                                 <div class="input-group">
-                                    <input type="password" class="form-control" id="password" placeholder="Contraseña">
+                                    <input type="password" class="form-control" id="contrasena" name="contrasena" placeholder="Contraseña" required>
+                                   
                                     <button class="btn btn-outline-secondary" type="button" id="togglePassword">👁️</button>
                                 </div>
                             </div>
@@ -31,7 +32,7 @@
                                 <button type="submit" class="btn btn-primary btn-block">Ingresar</button>
                             </div>
                         </form>
-                        
+
                             <div class="text-center mt-3">
                                 <a href="/inicio/recupera">¿Olvidaste tu contraseña?</a>
                             </div>

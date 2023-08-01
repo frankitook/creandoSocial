@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    const passwordField = document.getElementById("password");
+    const passwordField = document.getElementById("contrasena");
     const togglePasswordButton = document.getElementById("togglePassword");
     let isPasswordVisible = false;
 
