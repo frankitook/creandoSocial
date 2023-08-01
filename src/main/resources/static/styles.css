@@ -56,6 +56,26 @@ body {
     
 }
 
+.btn-register {
+    background-color: #007bff; /* Color de fondo azul (puedes cambiarlo) */
+    color: #ffffff; /* Color del texto blanco */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    text-decoration: none; /* Sin subrayado de enlace */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+    width: 100%; /* Hace que el botón ocupe todo el ancho disponible */
+  }
+  
+  /* Estilo al pasar el cursor sobre el botón */
+  .btn-register:hover {
+    background-color: #5758588e; /* Cambiar el color de fondo al pasar el cursor */
+  }
+
+  .btn-register span {
+    pointer-events: none; /* Evita que el texto reciba clics, solo el botón en sí será interactivo */
+  }
+
 .btn-primary {
     background-color: #1DA1F2;
     border: none;
