@@ -17,6 +17,23 @@ public class Controlador {
     
     return "inicio";
     }
+
+
+    @GetMapping("/ingreso")
+    public String ingreso(){
+
+
+        return "ingreso";
+    }
+
+
+     @GetMapping("/recupera")
+    public String recupera(){
+
+
+        return "recuperaContra";
+    }
+
     
     
 }
