@@ -38,7 +38,7 @@ public class Controlador {
             
             return "ingreso";
         } else {
-            
+            model.addAttribute("error", "Usuario o contraseña inválida. Inténtalo de nuevo.");
             return "inicio";
         }
     }
