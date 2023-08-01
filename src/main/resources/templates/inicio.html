@@ -19,9 +19,7 @@
                             
                         <form action="/inicio/ingreso" method="POST">
                             <!-- Mostrar el mensaje de error si existe -->
-                            <div th:if="${error}" class="error-message mt-3">
-                                <p th:text="${error}"></p>
-                            </div>
+                            
                         
                             <div class="mb-3">
                                 <input type="email" class="form-control" id="correo" name="correo" placeholder="Nombre de usuario">
@@ -31,6 +29,9 @@
                                     <input type="password" class="form-control" id="contrasena" name="contrasena" placeholder="Contraseña" required>
                                     <button class="btn btn-outline-secondary" type="button" id="togglePassword">👁️</button>
                                 </div>
+                            </div>
+                            <div th:if="${error}" class="error-message mt-3">
+                                <p th:text="${error}"></p>
                             </div>
                             <div class="d-grid">
                                 <button type="submit" class="btn btn-primary btn-block">Ingresar</button>

@@ -9,6 +9,15 @@ body {
     padding: 0;
 }
 
+.error-message {
+    color: red;
+    font-size: 14px;
+    
+    width: fit-content; /* Establecer el ancho al contenido del mensaje para centrarlo */
+    margin-bottom: 60px; /* Margen inferior reducido para que esté pegado al campo contraseña */
+  }
+  
+
 .background-container {
     background-image: url('/images/background.jpg');
     background-size: cover;
@@ -38,7 +47,7 @@ body {
 /* Estilos para los campos y el botón */
 .form-control,
 .btn {
-    margin-bottom: 25px; /* Agrega 10px de margen inferior para separar los elementos */
+    margin-bottom: 20px; /* Agrega 10px de margen inferior para separar los elementos */
 }
 
 /* Estilos para el formulario de inicio de sesión */
