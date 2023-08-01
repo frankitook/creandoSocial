@@ -1,0 +1,76 @@
+/* Estilos para el cuerpo del documento */
+body {
+    background-color: #f5f8fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.background-container {
+    background-image: url('/images/background.jpg');
+    background-size: cover;
+    /* Otros estilos relacionados con el fondo si los deseas */
+}
+
+/* Estilos para el contenedor principal */
+.container {
+    margin-block-start: 20px; /* Desplazar el contenedor hacia la derecha por 10px */
+}
+
+/* Estilos para la tarjeta de inicio de sesión */
+.card {
+    width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el título de la tarjeta */
+.card-title {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0 60px; /* Ajustar el margen inferior a 20px */
+}
+/* Estilos para los campos y el botón */
+.form-control,
+.btn {
+    margin-bottom: 25px; /* Agrega 10px de margen inferior para separar los elementos */
+}
+
+/* Estilos para el formulario de inicio de sesión */
+.form-label {
+    font-weight: bold;
+    
+}
+
+.btn-primary {
+    background-color: #1DA1F2;
+    border: none;
+}
+
+/* Estilos para el botón del ojo para mostrar/ocultar la contraseña */
+.btn-toggle-password {
+    border: none;
+    outline: none; /* Evita el borde activo (marcado) al hacer clic */
+    cursor: pointer;
+}
+
+/* Estilos para el enlace de "¿Olvidaste tu contraseña?" */
+.text-center a {
+    color: #1DA1F2;
+}
+
+/* Cambiar color de los enlaces cuando se les pasa el mouse por encima */
+.text-center a:hover {
+    color: #0073c1;
+}
+
+/* Estilos para el contenido del formulario */
+.card-body {
+    padding: 2rem;
+}
+
