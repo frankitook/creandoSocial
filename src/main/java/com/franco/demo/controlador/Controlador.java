@@ -4,6 +4,7 @@
  */
 package com.franco.demo.controlador;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,14 +14,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.franco.demo.dominio.Usuario;
-import com.franco.demo.repositorio.UsuarioRepository;
+import com.franco.demo.interfazservicio.IUsuarioService;
+
+
 
 @Controller
 @RequestMapping("/inicio")
 public class Controlador {
     
     @Autowired
-    private UsuarioRepository usuarioRepository;
+    private IUsuarioService service;
 
     @GetMapping("/form")
     public String iniciar(){
@@ -32,7 +35,7 @@ public class Controlador {
     @PostMapping("/ingreso")
     public String ingresar(@RequestParam("correo") String correo, @RequestParam("contrasena") String contrasena, Model model) {
         // Buscar el usuario en la base de datos por correo y contraseña
-        Usuario usuario = usuarioRepository.findByEmailAndContrasena(correo, contrasena);
+        Usuario usuario = service.buscarPorEmailYCorreo(correo , contrasena);
 
         if (usuario != null) {
             
