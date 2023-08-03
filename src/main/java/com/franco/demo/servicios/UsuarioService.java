@@ -19,5 +19,12 @@ public class UsuarioService implements IUsuarioService{
         
         return (Usuario)dao.findByEmailAndContrasena(correo , contrasena);
     }
+
+
+    @Override
+    public Usuario buscarPorEmail(String correo) {
+        
+        return (Usuario)dao.findByEmail(correo);
+    }
     
 }

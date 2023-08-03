@@ -35,6 +35,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-left: 70px;
 }
 
 /* Estilos para el título de la tarjeta */
@@ -57,24 +58,24 @@ body {
 }
 
 .btn-register {
-    background-color: #007bff; /* Color de fondo azul (puedes cambiarlo) */
-    color: #ffffff; /* Color del texto blanco */
-    border: none; /* Sin borde */
-    padding: 10px 20px; /* Espaciado interno */
+    background-color: #ffffff; /* Color de fondo blanco */
+    color: #000000; /* Color del texto azul (puedes cambiarlo) */
+    border: 1px solid #007bff; /* Borde con color azul */
+    padding: 7px 120px; /* Espaciado interno */
     text-decoration: none; /* Sin subrayado de enlace */
     border-radius: 5px; /* Bordes redondeados */
     font-size: 16px; /* Tamaño de fuente */
     width: 100%; /* Hace que el botón ocupe todo el ancho disponible */
-  }
-  
-  /* Estilo al pasar el cursor sobre el botón */
-  .btn-register:hover {
-    background-color: #5758588e; /* Cambiar el color de fondo al pasar el cursor */
-  }
+    transition: background-color 0.2s, color 0.2s; /* Añadimos una transición para suavizar el cambio de color */
+}
 
-  .btn-register span {
-    pointer-events: none; /* Evita que el texto reciba clics, solo el botón en sí será interactivo */
-  }
+/* Estilo al pasar el cursor sobre el botón */
+.btn-register:hover {
+    background-color: #aca3f5; /* Cambiar el color de fondo al pasar el cursor */
+    color: #000000; /* Cambiar el color del texto al pasar el cursor */
+}
+
+
 
 .btn-primary {
     background-color: #1DA1F2;

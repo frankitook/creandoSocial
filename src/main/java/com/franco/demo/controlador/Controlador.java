@@ -6,6 +6,7 @@ package com.franco.demo.controlador;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,6 +26,9 @@ public class Controlador {
     @Autowired
     private IUsuarioService service;
 
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
     @GetMapping("/form")
     public String iniciar(){
     
@@ -35,15 +39,22 @@ public class Controlador {
     @PostMapping("/ingreso")
     public String ingresar(@RequestParam("correo") String correo, @RequestParam("contrasena") String contrasena, Model model) {
         // Buscar el usuario en la base de datos por correo y contraseña
-        Usuario usuario = service.buscarPorEmailYCorreo(correo , contrasena);
+        Usuario usuario = service.buscarPorEmail(correo);
 
-        if (usuario != null) {
-            
+        if (usuario != null && passwordEncoder.matches(contrasena, usuario.getContrasena())) {
+            model.addAttribute("mensaje", "Hola " + correo + ", has iniciado sesión correctamente.");
             return "ingreso";
         } else {
             model.addAttribute("error", "Usuario o contraseña inválida. Inténtalo de nuevo.");
             return "inicio";
         }
+    }
+
+      @GetMapping("/registro")
+    public String registro(){
+
+
+        return "registrarse";
     }
 
 
